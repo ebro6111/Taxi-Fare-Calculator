@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Fare Calculator</title>
+    <link rel="stylesheet"
+          href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="py-5">
+    <div class="container">
+
+        <div class="header">
+            <h1 class="text-center">
+                <i class="bi bi-taxi-front text-success"></i>
+                <br>
+                <span class="text-capitalize">Ride Taxi Fare</span>
+            </h1>
+        </div>
+        <div class="row py-5">
+            <div class="col-md-5">
+                <div class="description">
+                    <h2 class="text-success fst-italic text-center">About Us</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis libero ab quia quos optio nesciunt, eaque unde quasi! Ipsum, autem.
+                        Our taxi service provides safe, reliable, and
+                        affordable transportation forlo
+                    </p>
+                    <div class="service">
+
+                        <h3 class="text-success text-center">Our Services</h3>
+                        <p>
+                            <i class="bi bi-calendar-check text-success"></i>
+                            Regular Schedule Service
+                        </p>
+                        <p>
+                            <i class="bi bi-tags text-success"></i>
+                            Discounts for Students, Low-Income
+                            Passengers, and People with Disabilities
+                        </p>
+                        <p>
+                            <i class="bi bi-clock-history text-success"></i>
+                            Peak Hour Service
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="col-md-7">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="text-center mb-0">
+                            Calculate Taxi Fare
+                        </h3>
+                    </div>
+
+                    <div class="card-body">
+
+                        <form id="taxiForm">
+
+                        
+                            <label for="pickupForm" class="form-label">
+                                <i class="bi bi-geo-alt-fill text-success"></i>
+                                Pickup Location
+                            </label>
+
+                            <input
+                                type="text"
+                                id="pickupForm"
+                                class="form-control"
+                                placeholder="Enter pickup location"
+                                required
+                            >
+                            <label for="distForm" class="form-label mt-3">
+                                <i class="bi bi-geo-alt-fill text-danger"></i>
+                                Destination
+                            </label>
+
+                            <input
+                                type="text"
+                                id="distForm"
+                                class="form-control"
+                                placeholder="Enter destination"
+                                required
+                            >
+
+                            <label for="distance" class="form-label mt-3">
+                                <i class="bi bi-signpost-2-fill"></i>
+                                Distance (KM)
+                            </label>
+
+                            <input
+                                type="number"
+                                id="distance"
+                                class="form-control"
+                                placeholder="Enter distance in KM"
+                                min="0.1"
+                                step="0.1"
+                                required
+                            >
+
+                            <label for="service" class="form-label mt-3">
+                                Select Service
+                            </label>
+
+                            <select id="service"
+                                    class="form-select"
+                                    required>
+                                <option value="">Choose service</option>
+                                <option value="regular">
+                                    Regular Schedule
+                                </option>
+                                <option value="peak">
+                                    Peak Hour (+30%)
+                                </option>
+                            </select>
+
+                        
+                            <label for="discount" class="form-label mt-3">
+                                Select Discount
+                            </label>
+
+                            <select id="discount"
+                                    class="form-select"
+                                    required>
+                                <option value="">Choose discount</option>
+                                <option value="none">
+                                    No Discount
+                                </option>
+                                <option value="student">
+                                    Student (8%)
+                                </option>
+                                <option value="lowIncome">
+                                    Low Income (10%)
+                                </option>
+                                <option value="disability">
+                                    Disability (30%)
+                                </option>
+                            </select>
+
+                        
+                            <button type="submit"
+                                    class="btn btn-success mt-4 w-100">
+                                <i class="bi bi-calculator"></i>
+                                Calculate Ride Fare
+                            </button>
+                        
+                       <button type="reset" class="btn btn-secondary mt-2 w-100">
+                       <i class="bi bi-arrow-counterclockwise"></i>
+                          Reset
+                        </button>
+                        </form>
+
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-5  col-lg-8 d-flex justify-content-between  align-items-center">
+               <div class="card">
+                <div class="card-body">
+                    <div id="result" class="mt-4"></div>
+                </div>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
