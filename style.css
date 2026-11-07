@@ -1,0 +1,160 @@
+/* ===== Taxi Fare Calculator - style.css ===== */
+
+:root {
+    --taxi-green: #146c43;
+    --taxi-green-dark: #0f5132;
+    --taxi-yellow: #f5b800;
+    --page-bg: #f4f7f5;
+    --text-dark: #1f2d26;
+    --radius: 0.75rem;
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-dark);
+    font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* ----- Header ----- */
+.header h1 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.header h1 i {
+    font-size: 4rem;
+    display: inline-block;
+}
+
+.header h1::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 5px;
+    margin: 0.75rem auto 0;
+    border-radius: 3px;
+    background: var(--taxi-yellow);
+}
+
+/* ----- About / Services (left column) ----- */
+.description {
+    background-color: #ffffff;
+    border-left: 5px solid var(--taxi-yellow);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+
+.description p {
+    max-width: 65ch;
+}
+
+.service {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #dfe7e2;
+}
+
+.service p {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-bottom: 0.9rem;
+}
+
+.service p i {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+/* ----- Form card (right column) ----- */
+.card {
+    border: none;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+.card-header.bg-success {
+    background-color: var(--taxi-green) !important;
+    padding: 1rem;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 0.5rem;
+    padding: 0.6rem 0.8rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--taxi-green);
+    box-shadow: 0 0 0 0.25rem rgba(20, 108, 67, 0.2);
+}
+
+.btn-success {
+    background-color: var(--taxi-green);
+    border-color: var(--taxi-green);
+    font-weight: 600;
+    padding: 0.7rem;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--taxi-green-dark);
+    border-color: var(--taxi-green-dark);
+}
+
+.btn-secondary {
+    padding: 0.6rem;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--taxi-yellow);
+    outline-offset: 2px;
+}
+
+/* ----- Result ----- */
+#result .card {
+    border: 2px solid var(--taxi-green);
+}
+
+#result .card-body p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px dashed #dfe7e2;
+}
+
+#result .card-body h4 {
+    margin-bottom: 0;
+}
+
+#result .alert {
+    border-radius: 0.5rem;
+    margin-bottom: 0;
+}
+
+/* ----- Small screens ----- */
+@media (max-width: 767.98px) {
+    .header h1 i {
+        font-size: 3rem;
+    }
+
+    .description {
+        margin-bottom: 1.5rem;
+        height: auto;
+    }
+
+    #result .card-body p {
+        flex-direction: column;
+        gap: 0;
+    }
+}
