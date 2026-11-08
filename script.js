@@ -1,8 +1,8 @@
 
 const form = document.getElementById("taxiForm");
 const result = document.getElementById("result");
-const baseFare = 70;
-const farePerKm = 100;
+const baseFare = 40;
+const farePerKm = 55;
 
 form.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -116,7 +116,7 @@ form.addEventListener("submit", function (event) {
                 </h4>
 
             </div>
-
+        
             <div class="card-body">
 
                 <p>
@@ -180,6 +180,7 @@ form.addEventListener("submit", function (event) {
         </div>
 
     `;
+    result.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 form.addEventListener("reset", function () {
     result.innerHTML = "";
