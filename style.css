@@ -91,6 +91,8 @@ body {
 
 .form-label {
     font-weight: 600;
+    font-style: italic;
+    font-size:20px ;
 }
 
 .form-control,
